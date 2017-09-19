@@ -1,0 +1,9 @@
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Domen\bin\Debug\Domen.dll
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Domen\bin\Debug\Domen.pdb
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Domen\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Domen\obj\Debug\Domen.dll
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Domen\obj\Debug\Domen.pdb
+C:\Users\Sasa\Desktop\PSProjectSasaLukic\Domain\bin\Debug\Domen.dll
+C:\Users\Sasa\Desktop\PSProjectSasaLukic\Domain\bin\Debug\Domen.pdb
+C:\Users\Sasa\Desktop\PSProjectSasaLukic\Domain\obj\Debug\Domen.dll
+C:\Users\Sasa\Desktop\PSProjectSasaLukic\Domain\obj\Debug\Domen.pdb

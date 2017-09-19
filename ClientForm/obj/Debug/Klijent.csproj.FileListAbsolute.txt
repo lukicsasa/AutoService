@@ -1,0 +1,92 @@
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Klijent.exe.config
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Klijent.exe
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Klijent.pdb
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.csprojResolveAssemblyReference.cache
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.GlavniMeni.resources
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.Login.resources
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.PretrazivanjeAutomobila.resources
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.PretrazivanjeUsluga.resources
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.Properties.Resources.resources
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.UnosAutomobila.resources
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.UnosNoveUsluge.resources
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.csproj.GenerateResource.Cache
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.exe
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.pdb
+C:\Users\Mimi\Documents\Visual Studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\KontrolerKorisnickogInterfejsa.dll
+C:\Users\Mimi\Documents\Visual Studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Domen.dll
+C:\Users\Mimi\Documents\Visual Studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\KontrolerKorisnickogInterfejsa.pdb
+C:\Users\Mimi\Documents\Visual Studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Domen.pdb
+C:\Users\Mimi\Documents\Visual Studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.UnosNovogVlasnika.resources
+C:\Users\Mimi\Documents\Visual Studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.KreirajRacun.resources
+C:\Users\Mimi\Documents\Visual Studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.PretragaRacuna.resources
+C:\Users\Mimi\Documents\Visual Studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.DetaljiRacuna.resources
+C:\Users\Mimi\Documents\Visual Studio 2015\Projects\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.UnosStavke.resources
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Klijent.exe.config
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Klijent.exe
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Klijent.pdb
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Domen.dll
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\KontrolerKorisnickogInterfejsa.dll
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Domen.pdb
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\KontrolerKorisnickogInterfejsa.pdb
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.csprojResolveAssemblyReference.cache
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.DetaljiRacuna.resources
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.GlavniMeni.resources
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.KreirajRacun.resources
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.Login.resources
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.PretragaRacuna.resources
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.PretrazivanjeAutomobila.resources
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.PretrazivanjeUsluga.resources
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.Properties.Resources.resources
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.UnosAutomobila.resources
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.UnosNoveUsluge.resources
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.UnosNovogVlasnika.resources
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.UnosStavke.resources
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.csproj.GenerateResource.Cache
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.exe
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.pdb
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Klijent.exe.config
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.exe
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.pdb
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Klijent.exe
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Klijent.pdb
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Domen.dll
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\KontrolerKorisnickogInterfejsa.dll
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Domen.pdb
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\KontrolerKorisnickogInterfejsa.pdb
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.csprojResolveAssemblyReference.cache
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.DetaljiRacuna.resources
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.GlavniMeni.resources
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.KreirajRacun.resources
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.Login.resources
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.PretragaRacuna.resources
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.PretrazivanjeAutomobila.resources
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.PretrazivanjeUsluga.resources
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.Properties.Resources.resources
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.UnosAutomobila.resources
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.UnosNoveUsluge.resources
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.UnosNovogVlasnika.resources
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.UnosStavke.resources
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.csproj.GenerateResource.Cache
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Klijent.exe.config
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Klijent.exe
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Klijent.pdb
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Domen.dll
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\KontrolerKorisnickogInterfejsa.dll
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\Domen.pdb
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\bin\Debug\KontrolerKorisnickogInterfejsa.pdb
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.csprojResolveAssemblyReference.cache
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.DetaljiRacuna.resources
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.GlavniMeni.resources
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.KreirajRacun.resources
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.Login.resources
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.PretragaRacuna.resources
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.PretrazivanjeAutomobila.resources
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.PretrazivanjeUsluga.resources
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.Properties.Resources.resources
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.UnosAutomobila.resources
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.UnosNoveUsluge.resources
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.UnosNovogVlasnika.resources
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.UnosStavke.resources
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.csproj.GenerateResource.Cache
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.exe
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Klijent\obj\Debug\Klijent.pdb

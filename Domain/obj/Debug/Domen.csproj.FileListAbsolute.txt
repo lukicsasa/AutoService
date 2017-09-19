@@ -1,0 +1,19 @@
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Domen\bin\Debug\Domen.dll
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Domen\bin\Debug\Domen.pdb
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Domen\obj\Debug\Domen.dll
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Domen\obj\Debug\Domen.pdb
+C:\Users\Mimi\Documents\Visual Studio 2015\Projects\ProjekatPSMilicaLazarevic\Domen\obj\Debug\Domen.csprojResolveAssemblyReference.cache
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Domen\bin\Debug\Domen.dll
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Domen\bin\Debug\Domen.pdb
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Domen\obj\Debug\Domen.dll
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Domen\obj\Debug\Domen.pdb
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Domen\bin\Debug\Domen.dll
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Domen\bin\Debug\Domen.pdb
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Domen\obj\Debug\Domen.csprojResolveAssemblyReference.cache
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Domen\obj\Debug\Domen.dll
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Domen\obj\Debug\Domen.pdb
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Domen\bin\Debug\Domen.dll
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Domen\bin\Debug\Domen.pdb
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Domen\obj\Debug\Domen.csprojResolveAssemblyReference.cache
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Domen\obj\Debug\Domen.dll
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Domen\obj\Debug\Domen.pdb

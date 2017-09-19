@@ -1,0 +1,68 @@
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\ServerForma.exe.config
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\ServerForma.exe
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\ServerForma.pdb
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\Domen.dll
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\KontrolerAplikacioneLogike.dll
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\SistemskeOperacije.dll
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\Sesija.dll
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\Domen.pdb
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\KontrolerAplikacioneLogike.pdb
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\SistemskeOperacije.pdb
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\Sesija.pdb
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.csprojResolveAssemblyReference.cache
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.PocetnServer.resources
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.Properties.Resources.resources
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.csproj.GenerateResource.Cache
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.exe
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.pdb
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\ServerForma.exe.config
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.exe
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.pdb
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\ServerForma.exe
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\ServerForma.pdb
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\Domen.dll
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\KontrolerAplikacioneLogike.dll
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\SistemskeOperacije.dll
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\Sesija.dll
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\Domen.pdb
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\KontrolerAplikacioneLogike.pdb
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\SistemskeOperacije.pdb
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\Sesija.pdb
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.csprojResolveAssemblyReference.cache
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.PocetnServer.resources
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.Properties.Resources.resources
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.csproj.GenerateResource.Cache
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\ServerForma.exe.config
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.exe
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.pdb
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\ServerForma.exe
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\ServerForma.pdb
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\Domen.dll
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\KontrolerAplikacioneLogike.dll
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\SistemskeOperacije.dll
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\Sesija.dll
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\Domen.pdb
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\KontrolerAplikacioneLogike.pdb
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\SistemskeOperacije.pdb
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\Sesija.pdb
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.csprojResolveAssemblyReference.cache
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.PocetnServer.resources
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.Properties.Resources.resources
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.csproj.GenerateResource.Cache
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\ServerForma.exe.config
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\ServerForma.exe
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\ServerForma.pdb
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\Domen.dll
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\KontrolerAplikacioneLogike.dll
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\SistemskeOperacije.dll
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\Sesija.dll
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\Domen.pdb
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\KontrolerAplikacioneLogike.pdb
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\SistemskeOperacije.pdb
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\bin\Debug\Sesija.pdb
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.csprojResolveAssemblyReference.cache
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.PocetnServer.resources
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.Properties.Resources.resources
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.csproj.GenerateResource.Cache
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.exe
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\ServerForma\obj\Debug\ServerForma.pdb

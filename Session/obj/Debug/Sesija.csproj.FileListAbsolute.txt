@@ -1,0 +1,28 @@
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Sesija\bin\Debug\Sesija.dll
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Sesija\bin\Debug\Sesija.pdb
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Sesija\bin\Debug\Domen.dll
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Sesija\bin\Debug\Domen.pdb
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Sesija\obj\Debug\Sesija.csprojResolveAssemblyReference.cache
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Sesija\obj\Debug\Sesija.dll
+c:\users\mimi\documents\visual studio 2015\Projects\ProjekatPSMilicaLazarevic\Sesija\obj\Debug\Sesija.pdb
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Sesija\bin\Debug\Sesija.dll
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Sesija\bin\Debug\Sesija.pdb
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Sesija\bin\Debug\Domen.dll
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Sesija\bin\Debug\Domen.pdb
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Sesija\obj\Debug\Sesija.csprojResolveAssemblyReference.cache
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Sesija\obj\Debug\Sesija.dll
+C:\Users\Aleksa\Desktop\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Sesija\obj\Debug\Sesija.pdb
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Sesija\bin\Debug\Sesija.dll
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Sesija\bin\Debug\Sesija.pdb
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Sesija\bin\Debug\Domen.dll
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Sesija\bin\Debug\Domen.pdb
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Sesija\obj\Debug\Sesija.csprojResolveAssemblyReference.cache
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Sesija\obj\Debug\Sesija.dll
+C:\Users\Mimi\Desktop\softveriKrajnjaVerzijaMilica\ProjekatPSMilicaLazarevic\ProjekatPSMilicaLazarevic\Sesija\obj\Debug\Sesija.pdb
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Sesija\bin\Debug\Sesija.dll
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Sesija\bin\Debug\Sesija.pdb
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Sesija\bin\Debug\Domen.dll
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Sesija\bin\Debug\Domen.pdb
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Sesija\obj\Debug\Sesija.csprojResolveAssemblyReference.cache
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Sesija\obj\Debug\Sesija.dll
+C:\Users\Sasa\Desktop\ProjekatPSMilicaLazarevic\Sesija\obj\Debug\Sesija.pdb
