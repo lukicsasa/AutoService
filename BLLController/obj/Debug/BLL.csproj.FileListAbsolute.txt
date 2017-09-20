@@ -20,3 +20,14 @@ C:\Users\Sasa\Desktop\PSProjectSasaLukic\BLLController\bin\Debug\Sesija.pdb
 C:\Users\Sasa\Desktop\PSProjectSasaLukic\BLLController\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\Sasa\Desktop\PSProjectSasaLukic\BLLController\obj\Debug\KontrolerAplikacioneLogike.dll
 C:\Users\Sasa\Desktop\PSProjectSasaLukic\BLLController\obj\Debug\KontrolerAplikacioneLogike.pdb
+C:\PrivateProjects\AutoService\BLLController\bin\Debug\KontrolerAplikacioneLogike.dll
+C:\PrivateProjects\AutoService\BLLController\bin\Debug\KontrolerAplikacioneLogike.pdb
+C:\PrivateProjects\AutoService\BLLController\bin\Debug\Domen.dll
+C:\PrivateProjects\AutoService\BLLController\bin\Debug\SistemskeOperacije.dll
+C:\PrivateProjects\AutoService\BLLController\bin\Debug\Sesija.dll
+C:\PrivateProjects\AutoService\BLLController\bin\Debug\Domen.pdb
+C:\PrivateProjects\AutoService\BLLController\bin\Debug\SistemskeOperacije.pdb
+C:\PrivateProjects\AutoService\BLLController\bin\Debug\Sesija.pdb
+C:\PrivateProjects\AutoService\BLLController\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\PrivateProjects\AutoService\BLLController\obj\Debug\KontrolerAplikacioneLogike.dll
+C:\PrivateProjects\AutoService\BLLController\obj\Debug\KontrolerAplikacioneLogike.pdb

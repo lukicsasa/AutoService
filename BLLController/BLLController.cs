@@ -24,18 +24,6 @@ namespace BLL
             return loginSo.ExecuteSO(employee) as Employee;
         }
 
-        //public List<Employee> VratiSveZaposlene()
-        //{
-        //    var vratiZaposlene = new GetAllSO();
-
-        //    var listaPomocna = vratiZaposlene.ExecuteSO(new Employee()) as List<IGenericObject>;
-        //    var listaZaposlenih = new List<Employee>();
-
-        //    foreach (Employee radnik in listaPomocna)
-        //        listaZaposlenih.Add(radnik);
-        //    return listaZaposlenih;
-        //}
-
         public static List<Employee> FindEmployee(string criteria)
         {
             var tmpEmployee = new Employee { Id = Convert.ToInt32(criteria) };
@@ -148,21 +136,28 @@ namespace BLL
 
         public static List<InvoiceItem> FindInvoiceItems(string criteria)
         {
-            var invoiceItem = new InvoiceItem();
-            var id = Convert.ToInt32(criteria);
-            invoiceItem.InvoiceNumber = id;
+            try
+            {
+                var invoiceItem = new InvoiceItem();
+                var id = Convert.ToInt32(criteria);
+                invoiceItem.InvoiceNumber = id;
 
-            var findSo = new FindSO();
-            var getSo = new GetSO();
-            var tmpList = findSo.ExecuteSO(invoiceItem) as List<IGenericObject>;
-            var invoiceItems = tmpList?.Cast<InvoiceItem>().ToList();
-            if (invoiceItems != null)
-                foreach (var item in invoiceItems)
-                {
-                    var service = getSo.ExecuteSO(new Service {Id = item.Service.Id}) as Service;
-                    item.Service = service;
-                }
-            return invoiceItems;
+                var findSo = new FindSO();
+                var getSo = new GetSO();
+                var tmpList = findSo.ExecuteSO(invoiceItem) as List<IGenericObject>;
+                var invoiceItems = tmpList?.Cast<InvoiceItem>().ToList();
+                if (invoiceItems != null)
+                    foreach (var item in invoiceItems)
+                    {
+                        var service = getSo.ExecuteSO(new Service {Id = item.Service.Id}) as Service;
+                        item.Service = service;
+                    }
+                return invoiceItems;
+            }
+            catch (Exception ex)
+            {
+               return null;
+            }
         }
     }
 }

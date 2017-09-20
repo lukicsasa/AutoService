@@ -7,3 +7,8 @@ C:\Users\Sasa\Desktop\PSProjectSasaLukic\Domain\bin\Debug\Domen.dll
 C:\Users\Sasa\Desktop\PSProjectSasaLukic\Domain\bin\Debug\Domen.pdb
 C:\Users\Sasa\Desktop\PSProjectSasaLukic\Domain\obj\Debug\Domen.dll
 C:\Users\Sasa\Desktop\PSProjectSasaLukic\Domain\obj\Debug\Domen.pdb
+C:\PrivateProjects\AutoService\Domain\bin\Debug\Domen.dll
+C:\PrivateProjects\AutoService\Domain\bin\Debug\Domen.pdb
+C:\PrivateProjects\AutoService\Domain\obj\Debug\Domen.dll
+C:\PrivateProjects\AutoService\Domain\obj\Debug\Domen.pdb
+C:\PrivateProjects\AutoService\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache

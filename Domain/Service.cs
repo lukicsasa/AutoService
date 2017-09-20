@@ -64,7 +64,7 @@ namespace Domain
 
         public string GetCondition()
         {
-            return "((Service.Id)=" + _id + ")";
+            return "((Service.Name) LIKE '%" + _name + "%')";
         }
 
         public string GetInsertColumns()

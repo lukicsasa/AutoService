@@ -19,3 +19,10 @@ C:\Users\Sasa\Desktop\PSProjectSasaLukic\Session\bin\Debug\Domen.pdb
 C:\Users\Sasa\Desktop\PSProjectSasaLukic\Session\obj\Debug\Session.csprojResolveAssemblyReference.cache
 C:\Users\Sasa\Desktop\PSProjectSasaLukic\Session\obj\Debug\Sesija.dll
 C:\Users\Sasa\Desktop\PSProjectSasaLukic\Session\obj\Debug\Sesija.pdb
+C:\PrivateProjects\AutoService\Session\bin\Debug\Sesija.dll
+C:\PrivateProjects\AutoService\Session\bin\Debug\Sesija.pdb
+C:\PrivateProjects\AutoService\Session\bin\Debug\Domen.dll
+C:\PrivateProjects\AutoService\Session\bin\Debug\Domen.pdb
+C:\PrivateProjects\AutoService\Session\obj\Debug\Session.csprojResolveAssemblyReference.cache
+C:\PrivateProjects\AutoService\Session\obj\Debug\Sesija.dll
+C:\PrivateProjects\AutoService\Session\obj\Debug\Sesija.pdb

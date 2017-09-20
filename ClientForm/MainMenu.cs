@@ -17,8 +17,15 @@ namespace ClientForm
 
         public MainMenu()
         {
-            InitializeComponent();
-            _uiController = new UiController.UIController();
+            try
+            {
+                InitializeComponent();
+                _uiController = new UiController.UIController();
+            }
+            catch (Exception ex)
+            {
+                
+            }
         }
 
         private void btnChangeCurrentUser_Click(object sender, EventArgs e)
@@ -29,8 +36,15 @@ namespace ClientForm
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
-            new Login(_uiController).ShowDialog();
-            _uiController.SetCurrentUser(txtCurrentUser);
+            try
+            {
+                new Login(_uiController).ShowDialog();
+                _uiController.SetCurrentUser(txtCurrentUser);
+            }
+            catch (Exception ex)
+            {
+                Dispose();
+            }
         }
 
         private void addNewAutoToolStripMenuItem_Click(object sender, EventArgs e)

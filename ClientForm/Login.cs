@@ -17,8 +17,20 @@ namespace ClientForm
 
         public Login(UiController.UIController uiController)
         {
-            _uiController = uiController;
-            InitializeComponent();
+            //try
+            //{
+                _uiController = uiController;
+                if (_uiController == null)
+                {
+                    Dispose();
+                    return;
+                }
+                InitializeComponent();
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw ex;
+            //}
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -34,7 +46,8 @@ namespace ClientForm
         private void btnLogin_Click(object sender, EventArgs e)
         {
             int result = _uiController.Login(txtUsername, txtPassword);
-            if (result == 1) {
+            if (result == 1)
+            {
                 Dispose();
             }
         }

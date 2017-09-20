@@ -25,3 +25,12 @@ C:\Users\Sasa\Desktop\PSProjectSasaLukic\SystemOperations\bin\Debug\Sesija.pdb
 C:\Users\Sasa\Desktop\PSProjectSasaLukic\SystemOperations\obj\Debug\SystemOperations.csprojResolveAssemblyReference.cache
 C:\Users\Sasa\Desktop\PSProjectSasaLukic\SystemOperations\obj\Debug\SistemskeOperacije.dll
 C:\Users\Sasa\Desktop\PSProjectSasaLukic\SystemOperations\obj\Debug\SistemskeOperacije.pdb
+C:\PrivateProjects\AutoService\SystemOperations\bin\Debug\SistemskeOperacije.dll
+C:\PrivateProjects\AutoService\SystemOperations\bin\Debug\SistemskeOperacije.pdb
+C:\PrivateProjects\AutoService\SystemOperations\bin\Debug\Domen.dll
+C:\PrivateProjects\AutoService\SystemOperations\bin\Debug\Sesija.dll
+C:\PrivateProjects\AutoService\SystemOperations\bin\Debug\Domen.pdb
+C:\PrivateProjects\AutoService\SystemOperations\bin\Debug\Sesija.pdb
+C:\PrivateProjects\AutoService\SystemOperations\obj\Debug\SystemOperations.csprojResolveAssemblyReference.cache
+C:\PrivateProjects\AutoService\SystemOperations\obj\Debug\SistemskeOperacije.dll
+C:\PrivateProjects\AutoService\SystemOperations\obj\Debug\SistemskeOperacije.pdb

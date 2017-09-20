@@ -90,7 +90,6 @@ namespace Session
             return _instance ?? (_instance = new Broker());
         }
 
-
         public bool Input(IGenericObject obj)
         {
             try
@@ -105,7 +104,6 @@ namespace Session
                 return false;
             }
         }
-
 
         public List<IGenericObject> GetAllObjects(IGenericObject obj)
         {

@@ -29,10 +29,6 @@ namespace Domain
     public class TransferObject
     {
         private Operation _operation;
-
-        //private object _result;
-        //private int _signal;
-
         private object _transferObject;
 
         public Operation Operation
@@ -46,19 +42,5 @@ namespace Domain
             get => _transferObject;
             set => _transferObject = value;
         }
-
-        //public object Result
-        //{
-        //    get => _result;
-        //    set => _result = value;
-        //}
-
-        //public bool Success { get; set; }
-
-        //public int Signal
-        //{
-        //    get => _signal;
-        //    set => _signal = value;
-        //}
     }
 }

@@ -19,3 +19,10 @@ C:\Users\Sasa\Desktop\PSProjectSasaLukic\UIController\bin\Debug\Domen.pdb
 C:\Users\Sasa\Desktop\PSProjectSasaLukic\UIController\obj\Debug\UIController.csprojResolveAssemblyReference.cache
 C:\Users\Sasa\Desktop\PSProjectSasaLukic\UIController\obj\Debug\KontrolerKorisnickogInterfejsa.dll
 C:\Users\Sasa\Desktop\PSProjectSasaLukic\UIController\obj\Debug\KontrolerKorisnickogInterfejsa.pdb
+C:\PrivateProjects\AutoService\UIController\bin\Debug\KontrolerKorisnickogInterfejsa.dll
+C:\PrivateProjects\AutoService\UIController\bin\Debug\KontrolerKorisnickogInterfejsa.pdb
+C:\PrivateProjects\AutoService\UIController\bin\Debug\Domen.dll
+C:\PrivateProjects\AutoService\UIController\bin\Debug\Domen.pdb
+C:\PrivateProjects\AutoService\UIController\obj\Debug\UIController.csprojResolveAssemblyReference.cache
+C:\PrivateProjects\AutoService\UIController\obj\Debug\KontrolerKorisnickogInterfejsa.dll
+C:\PrivateProjects\AutoService\UIController\obj\Debug\KontrolerKorisnickogInterfejsa.pdb

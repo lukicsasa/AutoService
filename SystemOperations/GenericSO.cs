@@ -7,8 +7,6 @@ namespace SystemOperations
 {
     public abstract class GenericSO
     {
-        public List<IGenericObject> List { get; set; }
-
         private readonly Broker _broker;
 
         protected GenericSO()

@@ -23,7 +23,7 @@ namespace ClientForm
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            _uiController.SaveNewOwner(txtFirstName, txtLastName, txtPhone, txtEmail);
+            _uiController.AddOwner(txtFirstName, txtLastName, txtPhone, txtEmail);
             Dispose();
         }
 

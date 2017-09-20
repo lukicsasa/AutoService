@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Windows.Forms;
 using Domain;
 
 namespace UIController
@@ -24,25 +25,11 @@ namespace UIController
             }
             catch
             {
-                // ignored
+                MessageBox.Show("Error establishing connection, try again!");
+                throw;
             }
         }
-
-        //public List<string> VratiImenaZaposlenih()
-        //{
-        //    try
-        //    {
-        //        var transfer = new TransferObject();
-        //        transfer.Operation = Operation.GetEmployeesNames;
-        //        _formatter.Serialize(_networkStream, transfer);
-        //        transfer = _formatter.Deserialize(_networkStream) as TransferObject;
-        //        return transfer.TransferObj as List<string>;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
+        
 
         public Employee Login(Employee employee)
         {
@@ -60,28 +47,11 @@ namespace UIController
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error establishing connection!");
                 throw;
             }
         }
-
-        //public List<Employee> PronadjiZaposlenog(string criteria)
-        //{
-        //    try
-        //    {
-        //        var transfer = new TransferObject();
-        //        transfer.TransferObj = criteria;
-        //        transfer.Operation = Operation.FindEmployee;
-        //        _formatter.Serialize(_networkStream, transfer);
-
-        //        transfer = _formatter.Deserialize(_networkStream) as TransferObject;
-        //        return transfer.TransferObj as List<Employee>;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
-
+        
         internal List<AutoType> GetAllAutoTypes()
         {
             try
@@ -94,6 +64,7 @@ namespace UIController
             }
             catch (Exception)
             {
+                MessageBox.Show("Error establishing connection!");
                 throw;
             }
         }
@@ -110,6 +81,7 @@ namespace UIController
             }
             catch (Exception)
             {
+                MessageBox.Show("Error establishing connection!");
                 throw;
             }
         }
@@ -131,6 +103,7 @@ namespace UIController
             }
             catch (Exception)
             {
+                MessageBox.Show("Error establishing connection!");
                 throw;
             }
         }
@@ -152,6 +125,8 @@ namespace UIController
             }
             catch (Exception)
             {
+
+                MessageBox.Show("Error establishing connection!");
                 throw;
             }
         }
@@ -172,6 +147,8 @@ namespace UIController
             }
             catch (Exception)
             {
+
+                MessageBox.Show("Error establishing connection!");
                 throw;
             }
         }
@@ -193,6 +170,8 @@ namespace UIController
             }
             catch (Exception)
             {
+
+                MessageBox.Show("Error establishing connection!");
                 throw;
             }
         }
@@ -214,6 +193,8 @@ namespace UIController
             }
             catch (Exception)
             {
+
+                MessageBox.Show("Error establishing connection!");
                 throw;
             }
         }
@@ -234,6 +215,8 @@ namespace UIController
             }
             catch (Exception)
             {
+
+                MessageBox.Show("Error establishing connection!");
                 throw;
             }
         }
@@ -255,6 +238,8 @@ namespace UIController
             }
             catch (Exception)
             {
+
+                MessageBox.Show("Error establishing connection!");
                 throw;
             }
         }
@@ -271,6 +256,8 @@ namespace UIController
             }
             catch (Exception)
             {
+
+                MessageBox.Show("Error establishing connection!");
                 throw;
             }
         }
@@ -287,6 +274,8 @@ namespace UIController
             }
             catch (Exception)
             {
+
+                MessageBox.Show("Error establishing connection!");
                 throw;
             }
         }
@@ -304,27 +293,12 @@ namespace UIController
             }
             catch (Exception)
             {
+
+                MessageBox.Show("Error establishing connection!");
                 throw;
             }
         }
-
-        //internal List<InvoiceItem> VratiSveStavkeRacuna()
-        //{
-        //    try
-        //    {
-        //        var transfer = new TransferObject();
-        //        transfer.Operation = Operation.GetAllInvoiceItems;
-        //        _formatter.Serialize(_networkStream, transfer);
-
-        //        transfer = _formatter.Deserialize(_networkStream) as TransferObject;
-        //        return transfer.TransferObj as List<InvoiceItem>;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
-
+        
         public List<InvoiceItem> FindInvoiceItems(string criteria)
         {
             try
@@ -341,6 +315,8 @@ namespace UIController
             }
             catch (Exception)
             {
+
+                MessageBox.Show("Error establishing connection!");
                 throw;
             }
         }
@@ -362,6 +338,8 @@ namespace UIController
             }
             catch (Exception)
             {
+
+                MessageBox.Show("Error establishing connection!");
                 throw;
             }
         }

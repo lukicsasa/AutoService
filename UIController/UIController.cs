@@ -15,8 +15,15 @@ namespace UiController
 
         public UIController()
         {
-            _connection = new Connection();
-            _connection.Connect();
+            //try
+            //{
+                _connection = new Connection();
+                _connection.Connect();
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw ex;
+            //}
         }
 
         private Employee CurrentUser { get; set; }
@@ -47,24 +54,6 @@ namespace UiController
             MessageBox.Show("Wrong username or password", "Error!");
             return 0;
         }
-
-        //private void PronadjiZaposlenog(string tbCriteria, ComboBox cbZaposleni)
-        //{
-        //    if (!tbCriteria.Equals(""))
-        //    {
-        //        var rezultati = _connection.PronadjiZaposlenog(tbCriteria);
-
-        //        if (rezultati.Count > 0)
-        //        {
-        //            cbZaposleni.DataSource = rezultati;
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Sistem ne može da nađe zaposlenog po zadatim vrednostima!");
-        //            cbZaposleni.DataSource = null;
-        //        }
-        //    }
-        //}
 
         public void SetCurrentUser(TextBox tx)
         {
@@ -103,10 +92,16 @@ namespace UiController
 
         public void FindInvoiceItems(DataGridView dgvInvoiceItems, TextBox txtValue)
         {
-            var invoiceItems = _connection.FindInvoiceItems(txtValue.Text);
-            dgvInvoiceItems.DataSource = invoiceItems.ToList().Select(s => new
-            { s.Service.Name, s.Value }).ToList();
-            dgvInvoiceItems.Text = string.Empty;
+            try
+            {
+                var invoiceItems = _connection.FindInvoiceItems(txtValue.Text);
+                dgvInvoiceItems.DataSource = invoiceItems.ToList().Select(s => new
+                    {s.Service.Name, s.Value}).ToList();
+                dgvInvoiceItems.Text = string.Empty;
+            }
+            catch (Exception ex)
+            {
+            }
         }
 
         public Auto PopulateAutoUpdate(DataGridView dgvResults, ComboBox cbOwners, ComboBox cbTypes,
@@ -134,10 +129,7 @@ namespace UiController
 
         public int AddService(TextBox tbServiceName, TextBox tbPrice, TextBox tbDescription)
         {
-            var numberRegex = new Regex("[0-9]");
-            var price = tbPrice.ToString();
-
-            if (numberRegex.IsMatch(price))
+            try
             {
                 var service = new Service
                 {
@@ -145,26 +137,21 @@ namespace UiController
                     Price = Convert.ToInt32(tbPrice.Text),
                     Description = tbDescription.Text
                 };
-                try
-                {
-                    var result = _connection.Input(service);
-                    if (result > 0)
-                    {
-                        MessageBox.Show("Service added!");
-                        return 1;
-                    }
-                    MessageBox.Show("System failed to save service!");
-                    return 0;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Service already exists!" + ex.Message);
-                    return 0;
-                }
-            }
 
-            MessageBox.Show("Niste pravilno uneli cenu");
-            return 0;
+                var result = _connection.Input(service);
+                if (result > 0)
+                {
+                    MessageBox.Show("Service added!");
+                    return 1;
+                }
+                MessageBox.Show("System has failed to save service!");
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("System has failed to save service!");
+                return 0;
+            }
         }
 
 
@@ -217,17 +204,17 @@ namespace UiController
                     MessageBox.Show("Service updated!");
                     return 1;
                 }
-                MessageBox.Show("System has failed to update service.");
+                MessageBox.Show("System has failed to update service!");
                 return 0;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("System error, try again!" + ex.Message);
+                MessageBox.Show("System has failed to update service!");
                 return 0;
             }
         }
 
-        public void SaveNewOwner(TextBox txtFirstName, TextBox txtLastName, TextBox txtPhone,
+        public void AddOwner(TextBox txtFirstName, TextBox txtLastName, TextBox txtPhone,
             TextBox txtEmail)
         {
             var owner = new Owner
@@ -249,15 +236,14 @@ namespace UiController
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Owner already exists!" + ex.Message);
+                MessageBox.Show("System has failed to save owner!");
             }
         }
 
         public int AddNewAuto(TextBox txtRegNumber, TextBox txtColor, TextBox txtProductionYear,
             TextBox txtDoors, TextBox txtGas, ComboBox cmbAutoType, ComboBox cmbOwner)
         {
-            var regex = new Regex("[0-9]");
-            if (regex.IsMatch(txtProductionYear.Text))
+            try
             {
                 var auto = new Auto
                 {
@@ -281,22 +267,19 @@ namespace UiController
                         Id = owner.Id
                     };
 
-                try
+                var result = _connection.Input(auto);
+                if (result > 0)
                 {
-                    var result = _connection.Input(auto);
-                    if (result > 0)
-                    {
-                        MessageBox.Show("Auto saved!");
-                        return 1;
-                    }
-                    MessageBox.Show("System has failed to save auto!");
-                    return 0;
+                    MessageBox.Show("Auto saved!");
+                    return 1;
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Auto already exists!" + ex.Message);
-                    return 0;
-                }
+                MessageBox.Show("System has failed to save auto!");
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("System has failed to save auto!");
+                return 0;
             }
 
             MessageBox.Show("Invalid year format!");
@@ -306,32 +289,32 @@ namespace UiController
         public int UpdateAuto(int autoId, TextBox txtRegNumber, TextBox txtColor, TextBox txtYear,
             TextBox txtDoors, TextBox txtGas, ComboBox cmbAutoType, ComboBox cmbOwner)
         {
-            var auto = new Auto
-            {
-                AutoId = autoId,
-                RegNumber = txtRegNumber.Text,
-                Color = txtColor.Text,
-                ProductionYear = Convert.ToInt32(txtYear.Text),
-                NumberOfDoors = Convert.ToInt32(txtDoors.Text),
-                Gas = txtGas.Text
-            };
-
-            var owner = cmbOwner.SelectedItem as Owner;
-            var autoType = cmbAutoType.SelectedItem as AutoType;
-
-            if (autoType != null)
-                auto.AutoType = new AutoType
-                {
-                    Id = autoType.Id
-                };
-            if (owner != null)
-                auto.Owner = new Owner
-                {
-                    Id = owner.Id
-                };
-
             try
             {
+                var auto = new Auto
+                {
+                    AutoId = autoId,
+                    RegNumber = txtRegNumber.Text,
+                    Color = txtColor.Text,
+                    ProductionYear = Convert.ToInt32(txtYear.Text),
+                    NumberOfDoors = Convert.ToInt32(txtDoors.Text),
+                    Gas = txtGas.Text
+                };
+
+                var owner = cmbOwner.SelectedItem as Owner;
+                var autoType = cmbAutoType.SelectedItem as AutoType;
+
+                if (autoType != null)
+                    auto.AutoType = new AutoType
+                    {
+                        Id = autoType.Id
+                    };
+                if (owner != null)
+                    auto.Owner = new Owner
+                    {
+                        Id = owner.Id
+                    };
+
                 var result = _connection.UpdateAuto(auto);
                 if (result > 0)
                 {
@@ -343,7 +326,7 @@ namespace UiController
             }
             catch (Exception ex)
             {
-                MessageBox.Show("System error, try again!" + ex.Message);
+                MessageBox.Show("System has failed to save auto.");
                 return 0;
             }
         }
@@ -380,7 +363,7 @@ namespace UiController
                     }
                     else
                     {
-                        MessageBox.Show("System failed to delete auto");
+                        MessageBox.Show("System has failed to delete auto!");
                     }
                     break;
                 case DialogResult.Cancel:
@@ -423,53 +406,47 @@ namespace UiController
 
         public void AddNewInvoiceItem(List<InvoiceItem> invoiceItems, ComboBox cmbService, TextBox txtValue)
         {
-            var service = cmbService.SelectedItem as Service;
-            var invoiceItem = new InvoiceItem
+            try
             {
-                Service = service,
-                Value = Convert.ToInt32(txtValue.Text)
-            };
-            invoiceItems.Add(invoiceItem);
-            //try
-            //{
-            //    var rezultat = _connection.Input(invoiceItem);
-            //    if (rezultat > 0)
-            //    {
-            //        MessageBox.Show("Invoice saved!");
-            //    }
-            //    MessageBox.Show("System has failed to save invoice item!");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Invoice item already exists!" + ex.Message);
-            //}
+                var service = cmbService.SelectedItem as Service;
+                var invoiceItem = new InvoiceItem
+                {
+                    Service = service,
+                    Value = Convert.ToInt32(txtValue.Text)
+                };
+                invoiceItems.Add(invoiceItem);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to create invoice item!");
+            }
         }
 
         public void AddInvoice(List<InvoiceItem> invoiceItems, DateTimePicker dtpDateTimePicker, ComboBox cmbAutos, ComboBox cmbEmployees)
         {
-            var auto = cmbAutos.SelectedItem as Auto;
-            var employee = cmbEmployees.SelectedItem as Employee;
-
-            var invoice = new Invoice
-            {
-                Date = dtpDateTimePicker.Value,
-                Auto = new Auto
-                {
-                    AutoId = auto.AutoId
-                },
-                Total =  invoiceItems.Sum(s => s.Value),
-                Employee = new Employee
-                {
-                    Id = employee.Id
-                },
-                InvoiceItems = new BindingList<InvoiceItem>(invoiceItems)
-            };
-
-            var id = _connection.GetNewId(invoice);
-            invoice.InvoiceNumber = id;
-
             try
             {
+                var auto = cmbAutos.SelectedItem as Auto;
+                var employee = cmbEmployees.SelectedItem as Employee;
+
+                var invoice = new Invoice
+                {
+                    Date = dtpDateTimePicker.Value,
+                    Auto = new Auto
+                    {
+                        AutoId = auto.AutoId
+                    },
+                    Total = invoiceItems.Sum(s => s.Value),
+                    Employee = new Employee
+                    {
+                        Id = employee.Id
+                    },
+                    InvoiceItems = new BindingList<InvoiceItem>(invoiceItems)
+                };
+
+                var id = _connection.GetNewId(invoice);
+                invoice.InvoiceNumber = id;
+
                 var result = _connection.Input(invoice);
                 if (result > 0)
                 {
@@ -487,7 +464,7 @@ namespace UiController
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Invoice already exists!" + ex.Message);
+                MessageBox.Show("System has failed to save an invoice!");
             }
         }
     }
