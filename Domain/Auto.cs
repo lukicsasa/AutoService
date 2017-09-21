@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.OleDb;
+using System.Runtime.Remoting.Messaging;
 
 namespace Domain
 {
@@ -63,6 +65,14 @@ namespace Domain
             get => _autoTypeType;
             set => _autoTypeType = value;
         }
+
+        [Browsable(false)]
+        public bool IsComplex => false;
+        [Browsable(false)]
+        public string ChildObjectTableName => null;
+
+        [Browsable(false)]
+        public List<IGenericObject> ChildObjects => null;
 
         public string GetTableName()
         {

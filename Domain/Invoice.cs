@@ -2,23 +2,24 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.OleDb;
+using System.Linq;
 
 namespace Domain
 {
     [Serializable]
     public class Invoice : IGenericObject
     {
+        [Browsable(false)]
+        public bool IsComplex => true;
+        [Browsable(false)]
+        public List<IGenericObject> ChildObjects => GenericInvoiceItems;
+        [Browsable(false)]
+        public string ChildObjectTableName => "InvoiceItem";
+
         private Auto _auto;
         private int _invoiceNo;
         private DateTime _date;
         private Employee _employee;
-
-        public Invoice(BindingList<InvoiceItem> invoiceItems)
-        {
-            InvoiceItems = invoiceItems;
-        }
-
-        public Invoice() { }
 
         public int InvoiceNumber
         {
@@ -42,11 +43,14 @@ namespace Domain
         [Browsable(false)]
         public Employee Employee
         {
-            private get => _employee;
+            get => _employee;
             set => _employee = value;
         }
 
-        public BindingList<InvoiceItem> InvoiceItems { get; set; }
+        [Browsable(false)]
+        private List<IGenericObject> GenericInvoiceItems => new List<IGenericObject>(InvoiceItems);
+
+        public List<InvoiceItem> InvoiceItems { get; set; }
 
         public string GetTableName()
         {
@@ -76,7 +80,7 @@ namespace Domain
 
         public string GetUpdateValues()
         {
-            return null;
+            return "DateCreated='" + Date.ToShortDateString() + "', Total='" + Total + "', AutoID=" + Auto.AutoId + ", EmployeeId=" + Employee.Id;
         }
 
         public string GetCondition()

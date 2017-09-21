@@ -1,13 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using Domain;
 
 namespace ServerForm
 {
     public class Server
     {
         private Socket _socket;
+        private List<Employee> _loggedUsers = new List<Employee>();
         public void Start()
         {
             try
@@ -36,7 +39,7 @@ namespace ServerForm
                 {
                     var client = _socket.Accept();
                     var networkStream = new NetworkStream(client);
-                    var obrada = new Worker(networkStream);
+                    var obrada = new Worker(networkStream, _loggedUsers);
                 }
             }
             catch (Exception)

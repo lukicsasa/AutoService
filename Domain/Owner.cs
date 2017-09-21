@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.OleDb;
 
 namespace Domain
@@ -7,6 +8,13 @@ namespace Domain
     [Serializable]
     public class Owner : IGenericObject
     {
+        [Browsable(false)]
+        public bool IsComplex => false;
+        [Browsable(false)]
+        public List<IGenericObject> ChildObjects => null;
+        [Browsable(false)]
+        public string ChildObjectTableName => null;
+
         private string _email;
         private string _firstName;
         private string _phone;

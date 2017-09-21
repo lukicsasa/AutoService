@@ -22,7 +22,10 @@ namespace Domain
         GetAllServices,
         GetAllAutos,
         GetAllInvoiceItems,
-        FindInvoiceItems
+        FindInvoiceItems,
+        UpdateInvoice,
+        DeleteInvoice,
+        Logout
     }
 
     [Serializable]

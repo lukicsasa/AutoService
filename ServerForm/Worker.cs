@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
@@ -13,13 +15,14 @@ namespace ServerForm
         private readonly NetworkStream _networkStream;
         private readonly BinaryFormatter _formatter;
         private readonly BLLController _controller;
+        private List<Employee> _loggedUsers;
 
-
-        public Worker(NetworkStream networkStream)
+        public Worker(NetworkStream networkStream, List<Employee> loggedUsers)
         {
             _networkStream = networkStream;
             _formatter = new BinaryFormatter();
             _controller = new BLLController();
+            _loggedUsers = loggedUsers;
 
             ThreadStart ts = Handle;
             var thread = new Thread(ts);
@@ -42,9 +45,17 @@ namespace ServerForm
                             _formatter.Serialize(_networkStream, transferObject);
                             break;
                         case Operation.Login:
+                            var currentUser = transferObject.TransferObj as Employee;
+                            if (_loggedUsers.Any(a => a.Username == currentUser.Username))
+                            {
+                                transferObject.TransferObj = -1;
+                                _formatter.Serialize(_networkStream, transferObject);
+                                continue;
+                            }
                             transferObject.TransferObj =
-                                _controller.Login(transferObject.TransferObj as Employee);
+                                _controller.Login(currentUser);
                             _formatter.Serialize(_networkStream, transferObject);
+                            _loggedUsers.Add(currentUser);
                             break;
                         case Operation.FindEmployee:
                             transferObject.TransferObj =
@@ -117,6 +128,20 @@ namespace ServerForm
                         case Operation.FindInvoiceItems:
                             transferObject.TransferObj =
                                 BLLController.FindInvoiceItems(transferObject.TransferObj as string);
+                            _formatter.Serialize(_networkStream, transferObject);
+                            break;
+                        case Operation.UpdateInvoice:
+                            transferObject.TransferObj = BLLController.UpdateInvoice(transferObject.TransferObj as Invoice);
+                            _formatter.Serialize(_networkStream, transferObject);
+                            break;
+                        case Operation.DeleteInvoice:
+                            transferObject.TransferObj = BLLController.DeleteInvoice(transferObject.TransferObj as Invoice);
+                            _formatter.Serialize(_networkStream, transferObject);
+                            break;
+                        case Operation.Logout:
+                            var user = transferObject.TransferObj as Employee;
+                            _loggedUsers.RemoveAll(a => a.Username == user.Username);
+                            transferObject.TransferObj = true;
                             _formatter.Serialize(_networkStream, transferObject);
                             break;
                         case Operation.End:

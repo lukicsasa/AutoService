@@ -43,6 +43,7 @@
             this.btnChangeCurrentUser = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCurrentUser = new System.Windows.Forms.TextBox();
+            this.Logout = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,14 +72,14 @@
             // unosNovogToolStripMenuItem
             // 
             this.unosNovogToolStripMenuItem.Name = "unosNovogToolStripMenuItem";
-            this.unosNovogToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.unosNovogToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.unosNovogToolStripMenuItem.Text = "Add Auto";
             this.unosNovogToolStripMenuItem.Click += new System.EventHandler(this.addNewAutoToolStripMenuItem_Click);
             // 
             // pretrazivanjeAutomobilaToolStripMenuItem
             // 
             this.pretrazivanjeAutomobilaToolStripMenuItem.Name = "pretrazivanjeAutomobilaToolStripMenuItem";
-            this.pretrazivanjeAutomobilaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pretrazivanjeAutomobilaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.pretrazivanjeAutomobilaToolStripMenuItem.Text = "Search Autos";
             this.pretrazivanjeAutomobilaToolStripMenuItem.Click += new System.EventHandler(this.searchAutosToolStripMenuItem_Click);
             // 
@@ -116,7 +117,7 @@
             // unosNovogVlasnikaToolStripMenuItem
             // 
             this.unosNovogVlasnikaToolStripMenuItem.Name = "unosNovogVlasnikaToolStripMenuItem";
-            this.unosNovogVlasnikaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.unosNovogVlasnikaToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.unosNovogVlasnikaToolStripMenuItem.Text = "Add Owner";
             this.unosNovogVlasnikaToolStripMenuItem.Click += new System.EventHandler(this.addOwnerToolStripMenuItem_Click);
             // 
@@ -170,11 +171,22 @@
             this.txtCurrentUser.Size = new System.Drawing.Size(100, 20);
             this.txtCurrentUser.TabIndex = 9;
             // 
+            // Logout
+            // 
+            this.Logout.Location = new System.Drawing.Point(122, 207);
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(109, 23);
+            this.Logout.TabIndex = 10;
+            this.Logout.Text = "Logout";
+            this.Logout.UseVisualStyleBackColor = true;
+            this.Logout.Click += new System.EventHandler(this.Logout_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(361, 265);
+            this.Controls.Add(this.Logout);
             this.Controls.Add(this.txtCurrentUser);
             this.Controls.Add(this.btnChangeCurrentUser);
             this.Controls.Add(this.label1);
@@ -206,5 +218,6 @@
         private System.Windows.Forms.Button btnChangeCurrentUser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCurrentUser;
+        private System.Windows.Forms.Button Logout;
     }
 }

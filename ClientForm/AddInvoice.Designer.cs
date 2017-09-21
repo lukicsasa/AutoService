@@ -39,6 +39,7 @@
             this.btnSubmitInvoice = new System.Windows.Forms.Button();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dgvItems = new System.Windows.Forms.DataGridView();
+            this.DeleteItem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,7 +115,7 @@
             // 
             // btnSubmitInvoice
             // 
-            this.btnSubmitInvoice.Location = new System.Drawing.Point(312, 306);
+            this.btnSubmitInvoice.Location = new System.Drawing.Point(338, 311);
             this.btnSubmitInvoice.Name = "btnSubmitInvoice";
             this.btnSubmitInvoice.Size = new System.Drawing.Size(115, 23);
             this.btnSubmitInvoice.TabIndex = 13;
@@ -137,11 +138,22 @@
             this.dgvItems.Size = new System.Drawing.Size(438, 139);
             this.dgvItems.TabIndex = 15;
             // 
+            // DeleteItem
+            // 
+            this.DeleteItem.Location = new System.Drawing.Point(208, 311);
+            this.DeleteItem.Name = "DeleteItem";
+            this.DeleteItem.Size = new System.Drawing.Size(109, 23);
+            this.DeleteItem.TabIndex = 16;
+            this.DeleteItem.Text = "Delete item";
+            this.DeleteItem.UseVisualStyleBackColor = true;
+            this.DeleteItem.Click += new System.EventHandler(this.DeleteItem_Click);
+            // 
             // AddInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(483, 341);
+            this.Controls.Add(this.DeleteItem);
             this.Controls.Add(this.dgvItems);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.btnSubmitInvoice);
@@ -174,5 +186,6 @@
         private System.Windows.Forms.Button btnSubmitInvoice;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.DataGridView dgvItems;
+        private System.Windows.Forms.Button DeleteItem;
     }
 }

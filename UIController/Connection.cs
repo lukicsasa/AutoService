@@ -29,7 +29,7 @@ namespace UIController
                 throw;
             }
         }
-        
+
 
         public Employee Login(Employee employee)
         {
@@ -43,7 +43,32 @@ namespace UIController
                 _formatter.Serialize(_networkStream, transfer);
 
                 transfer = _formatter.Deserialize(_networkStream) as TransferObject;
-                return transfer?.TransferObj as Employee;
+                var error = false;
+                try
+                {
+                    var result = (int)transfer.TransferObj;
+                    if (result == -1)
+                    {
+                        MessageBox.Show("User is already logged in!");
+                        error = true;
+                    }
+                }
+                catch
+                {
+
+                }
+                var emp = transfer?.TransferObj as Employee;
+                if (emp != null)
+                {
+                    MessageBox.Show("Login successfull.");
+                }
+                else
+                {
+                    if (!error)
+                        MessageBox.Show("Wrong username or password", "Error!");
+
+                }
+                return emp;
             }
             catch (Exception ex)
             {
@@ -51,12 +76,34 @@ namespace UIController
                 throw;
             }
         }
-        
+
+        public bool Logout(Employee employee)
+        {
+            try
+            {
+                var transfer = new TransferObject
+                {
+                    TransferObj = employee,
+                    Operation = Operation.Logout
+                };
+                _formatter.Serialize(_networkStream, transfer);
+
+                transfer = _formatter.Deserialize(_networkStream) as TransferObject;
+                var result = (bool)transfer?.TransferObj;
+                return result;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error establishing connection!");
+                throw;
+            }
+        }
+
         internal List<AutoType> GetAllAutoTypes()
         {
             try
             {
-                var transfer = new TransferObject {Operation = Operation.GetAutoTypes};
+                var transfer = new TransferObject { Operation = Operation.GetAutoTypes };
                 _formatter.Serialize(_networkStream, transfer);
 
                 transfer = _formatter.Deserialize(_networkStream) as TransferObject;
@@ -73,7 +120,7 @@ namespace UIController
         {
             try
             {
-                var transfer = new TransferObject {Operation = Operation.GetAllOwners};
+                var transfer = new TransferObject { Operation = Operation.GetAllOwners };
                 _formatter.Serialize(_networkStream, transfer);
 
                 transfer = _formatter.Deserialize(_networkStream) as TransferObject;
@@ -98,7 +145,7 @@ namespace UIController
                 _formatter.Serialize(_networkStream, transfer);
 
                 transfer = _formatter.Deserialize(_networkStream) as TransferObject;
-                if (transfer != null) return (int) transfer.TransferObj;
+                if (transfer != null) return (int)transfer.TransferObj;
                 return -1;
             }
             catch (Exception)
@@ -120,7 +167,7 @@ namespace UIController
                 _formatter.Serialize(_networkStream, transfer);
 
                 transfer = _formatter.Deserialize(_networkStream) as TransferObject;
-                if (transfer != null) return (int) transfer.TransferObj;
+                if (transfer != null) return (int)transfer.TransferObj;
                 return -1;
             }
             catch (Exception)
@@ -165,7 +212,7 @@ namespace UIController
                 _formatter.Serialize(_networkStream, transfer);
 
                 transfer = _formatter.Deserialize(_networkStream) as TransferObject;
-                if (transfer != null) return (int) transfer.TransferObj;
+                if (transfer != null) return (int)transfer.TransferObj;
                 return -1;
             }
             catch (Exception)
@@ -188,7 +235,7 @@ namespace UIController
                 _formatter.Serialize(_networkStream, transfer);
 
                 transfer = _formatter.Deserialize(_networkStream) as TransferObject;
-                if (transfer != null) return (int) transfer.TransferObj;
+                if (transfer != null) return (int)transfer.TransferObj;
                 return -1;
             }
             catch (Exception)
@@ -233,7 +280,7 @@ namespace UIController
                 _formatter.Serialize(_networkStream, transfer);
 
                 transfer = _formatter.Deserialize(_networkStream) as TransferObject;
-                if (transfer != null) return (int) transfer.TransferObj;
+                if (transfer != null) return (int)transfer.TransferObj;
                 return -1;
             }
             catch (Exception)
@@ -248,7 +295,7 @@ namespace UIController
         {
             try
             {
-                var transfer = new TransferObject {Operation = Operation.GetAllEmployees};
+                var transfer = new TransferObject { Operation = Operation.GetAllEmployees };
                 _formatter.Serialize(_networkStream, transfer);
 
                 transfer = _formatter.Deserialize(_networkStream) as TransferObject;
@@ -266,7 +313,7 @@ namespace UIController
         {
             try
             {
-                var transfer = new TransferObject {Operation = Operation.GetAllServices};
+                var transfer = new TransferObject { Operation = Operation.GetAllServices };
                 _formatter.Serialize(_networkStream, transfer);
 
                 transfer = _formatter.Deserialize(_networkStream) as TransferObject;
@@ -285,7 +332,7 @@ namespace UIController
         {
             try
             {
-                var transfer = new TransferObject {Operation = Operation.GetAllAutos};
+                var transfer = new TransferObject { Operation = Operation.GetAllAutos };
                 _formatter.Serialize(_networkStream, transfer);
 
                 transfer = _formatter.Deserialize(_networkStream) as TransferObject;
@@ -298,7 +345,7 @@ namespace UIController
                 throw;
             }
         }
-        
+
         public List<InvoiceItem> FindInvoiceItems(string criteria)
         {
             try
@@ -322,7 +369,7 @@ namespace UIController
         }
 
 
-        public List<Invoice> FindInvoice(string criteria)
+        public List<Invoice> FindInvoices(string criteria)
         {
             try
             {
@@ -339,6 +386,51 @@ namespace UIController
             catch (Exception)
             {
 
+                MessageBox.Show("Error establishing connection!");
+                throw;
+            }
+        }
+
+        public int UpdateInvoice(Invoice invoice)
+        {
+            try
+            {
+                var transfer = new TransferObject
+                {
+                    TransferObj = invoice,
+                    Operation = Operation.UpdateInvoice
+                };
+                _formatter.Serialize(_networkStream, transfer);
+
+                transfer = _formatter.Deserialize(_networkStream) as TransferObject;
+                if (transfer != null) return (int)transfer.TransferObj;
+                return -1;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error establishing connection!");
+                throw;
+            }
+        }
+
+        public int DeleteInvoice(Invoice invoice)
+        {
+            try
+            {
+                var transfer = new TransferObject
+                {
+                    TransferObj = invoice,
+                    Operation = Operation.DeleteInvoice
+                };
+                _formatter.Serialize(_networkStream, transfer);
+
+                transfer = _formatter.Deserialize(_networkStream) as TransferObject;
+                if (transfer != null) return (int)transfer.TransferObj;
+                return -1;
+            }
+            catch (Exception)
+            {
                 MessageBox.Show("Error establishing connection!");
                 throw;
             }

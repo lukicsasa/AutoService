@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.OleDb;
 
 namespace Domain
@@ -7,6 +8,13 @@ namespace Domain
     [Serializable]
     public class Service : IGenericObject
     {
+        [Browsable(false)]
+        public bool IsComplex => false;
+        [Browsable(false)]
+        public List<IGenericObject> ChildObjects => null;
+        [Browsable(false)]
+        public string ChildObjectTableName => null;
+
         private int _price;
         private string _name;
 
@@ -64,7 +72,7 @@ namespace Domain
 
         public string GetCondition()
         {
-            return "((Service.Name) LIKE '%" + _name + "%')";
+            return "((Service.Id)=" + Id + ")";
         }
 
         public string GetInsertColumns()

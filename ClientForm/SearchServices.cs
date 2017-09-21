@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using Domain;
 
 namespace ClientForm
 {
@@ -15,7 +17,15 @@ namespace ClientForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _uiController.FindService(txtCriteria, dgvServices, null, true);
+            if (string.IsNullOrWhiteSpace(txtCriteria.Text))
+            {
+                var services = _uiController.GetAllServices(null);
+                dgvServices.DataSource = services;
+            }
+            else
+            {
+                _uiController.FindService(txtCriteria, dgvServices, null, true);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -17,8 +17,8 @@ namespace UiController
         {
             //try
             //{
-                _connection = new Connection();
-                _connection.Connect();
+            _connection = new Connection();
+            _connection.Connect();
             //}
             //catch (Exception ex)
             //{
@@ -47,12 +47,21 @@ namespace UiController
             var employee = _connection.Login(loginEmployee);
             if (employee != null)
             {
-                MessageBox.Show("Login successfull.");
                 CurrentUser = employee;
                 return 1;
             }
-            MessageBox.Show("Wrong username or password", "Error!");
             return 0;
+        }
+
+        public bool Logout()
+        {
+            var emp = new Employee
+            {
+                Username = CurrentUser.Username
+            };
+
+            var result = _connection.Logout(emp);
+            return result;
         }
 
         public void SetCurrentUser(TextBox tx)
@@ -78,10 +87,13 @@ namespace UiController
             cb.Text = string.Empty;
         }
 
-        public void GetAllServices(ComboBox cb)
+        public List<Service> GetAllServices(ComboBox cb)
         {
-            cb.DataSource = _connection.GetAllServices();
+            var services = _connection.GetAllServices();
+            if (cb == null) return services;
+            cb.DataSource = services;
             cb.Text = string.Empty;
+            return services;
         }
 
         public void GetAllAutos(ComboBox cb)
@@ -90,17 +102,18 @@ namespace UiController
             cb.Text = string.Empty;
         }
 
-        public void FindInvoiceItems(DataGridView dgvInvoiceItems, TextBox txtValue)
+        public List<InvoiceItem> FindInvoiceItems(DataGridView dgvInvoiceItems, string invoiceNumber)
         {
             try
             {
-                var invoiceItems = _connection.FindInvoiceItems(txtValue.Text);
-                dgvInvoiceItems.DataSource = invoiceItems.ToList().Select(s => new
-                    {s.Service.Name, s.Value}).ToList();
+                var invoiceItems = _connection.FindInvoiceItems(invoiceNumber);
+                dgvInvoiceItems.DataSource = new BindingList<InvoiceItem>(invoiceItems.ToList());
                 dgvInvoiceItems.Text = string.Empty;
+                return invoiceItems;
             }
             catch (Exception ex)
             {
+                return null;
             }
         }
 
@@ -157,19 +170,26 @@ namespace UiController
 
         public void FindService(TextBox tbCriteria, DataGridView dgvServices, ComboBox cbServices, bool change)
         {
-            var criteria = tbCriteria.Text;
-            var results = _connection.FindServices(criteria);
-
-            if (results.Any())
+            try
             {
-                if (dgvServices != null) dgvServices.DataSource = results;
-                if (cbServices != null) cbServices.DataSource = results;
+                int id = Int32.Parse(tbCriteria.Text);
+                var results = _connection.FindServices(id.ToString());
+
+                if (results.Any())
+                {
+                    if (dgvServices != null) dgvServices.DataSource = results;
+                    if (cbServices != null) cbServices.DataSource = results;
+                }
+                else
+                {
+                    MessageBox.Show("System is unable to find services by given criteria!");
+                    if (dgvServices != null) dgvServices.DataSource = null;
+                    if (cbServices != null) cbServices.DataSource = null;
+                }
             }
-            else
+            catch (Exception ex)
             {
                 MessageBox.Show("System is unable to find services by given criteria!");
-                if (dgvServices != null) dgvServices.DataSource = null;
-                if (cbServices != null) cbServices.DataSource = null;
             }
         }
 
@@ -281,9 +301,6 @@ namespace UiController
                 MessageBox.Show("System has failed to save auto!");
                 return 0;
             }
-
-            MessageBox.Show("Invalid year format!");
-            return 0;
         }
 
         public int UpdateAuto(int autoId, TextBox txtRegNumber, TextBox txtColor, TextBox txtYear,
@@ -371,12 +388,12 @@ namespace UiController
             }
         }
 
-        public void SearchInvoice(ComboBox cmbCriteria, DataGridView dgvInvoices, bool change)
+        public void SearchInvoices(ComboBox cmbCriteria, DataGridView dgvInvoices, bool change)
         {
             var txtCriteria = cmbCriteria.SelectedItem as Auto;
             if (txtCriteria == null) return;
             var criteria = txtCriteria.AutoId.ToString();
-            var invoices = _connection.FindInvoice(criteria);
+            var invoices = _connection.FindInvoices(criteria);
 
             if (invoices.Any())
             {
@@ -401,7 +418,7 @@ namespace UiController
                 txtOwner.Text = invoice.Auto.AutoId.ToString();
                 txtValue.Text = invoice.Total.ToString();
             }
-            FindInvoiceItems(dgvInvoiceItems, txtInvoiceNumber);
+            FindInvoiceItems(dgvInvoiceItems, txtInvoiceNumber.ToString());
         }
 
         public void AddNewInvoiceItem(List<InvoiceItem> invoiceItems, ComboBox cmbService, TextBox txtValue)
@@ -414,6 +431,12 @@ namespace UiController
                     Service = service,
                     Value = Convert.ToInt32(txtValue.Text)
                 };
+                var serviceInList = invoiceItems.FirstOrDefault(a => a.Service.Id == service.Id);
+                if (serviceInList != null)
+                {
+                    serviceInList.Value += invoiceItem.Value;
+                    return;
+                }
                 invoiceItems.Add(invoiceItem);
             }
             catch (Exception ex)
@@ -441,31 +464,76 @@ namespace UiController
                     {
                         Id = employee.Id
                     },
-                    InvoiceItems = new BindingList<InvoiceItem>(invoiceItems)
                 };
 
                 var id = _connection.GetNewId(invoice);
                 invoice.InvoiceNumber = id;
 
+                invoiceItems.ForEach(f => f.InvoiceNumber = invoice.InvoiceNumber);
+                invoice.InvoiceItems = invoiceItems;
+
                 var result = _connection.Input(invoice);
-                if (result > 0)
-                {
-                    MessageBox.Show("Invoice has been added!");
-                    foreach (var item in invoice.InvoiceItems)
-                    {
-                        item.InvoiceNumber = invoice.InvoiceNumber;
-                        _connection.Input(item);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("System has failed to save an invoice!");
-                }
+                MessageBox.Show(result > 0 ? "Invoice has been added!" : "System has failed to save an invoice!");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("System has failed to save an invoice!");
             }
+        }
+
+        public void UpdateInvoice(Invoice invoice, List<InvoiceItem> invoiceItems, DateTimePicker dtpDateTimePicker, ComboBox cmbAutos, ComboBox cmbEmployees)
+        {
+            try
+            {
+                var auto = cmbAutos.SelectedItem as Auto;
+                var employee = cmbEmployees.SelectedItem as Employee;
+
+                invoice.Date = dtpDateTimePicker.Value;
+                invoice.Auto = new Auto
+                {
+                    AutoId = auto.AutoId
+                };
+                invoice.Total = invoiceItems.Sum(s => s.Value);
+                invoice.Employee = new Employee
+                {
+                    Id = employee.Id
+                };
+                invoiceItems.ForEach(f => f.InvoiceNumber = invoice.InvoiceNumber);
+                invoice.InvoiceItems = invoiceItems;
+
+                var result = _connection.UpdateInvoice(invoice);
+                MessageBox.Show(result > 0 ? "Invoice has been saved!" : "System has failed to save an invoice!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("System has failed to save an invoice!");
+            }
+        }
+
+        public bool DeleteInvoice(DataGridView dgvInvoices)
+        {
+            var dr = MessageBox.Show("Are you sure you want to delete auto?", "Alert!",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            switch (dr)
+            {
+                case DialogResult.Yes:
+                    var invoice = dgvInvoices.CurrentRow?.DataBoundItem as Invoice;
+                    var result = _connection.DeleteInvoice(invoice);
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Invoice deleted!");
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                        MessageBox.Show("System has failed to delete invoice!");
+                    }
+                    break;
+                case DialogResult.Cancel:
+                    break;
+            }
+            return false;
         }
     }
 }

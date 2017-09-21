@@ -9,6 +9,13 @@ namespace Domain
 {
     public interface IGenericObject
     {
+        bool IsComplex
+        {
+            get;
+        }
+        string ChildObjectTableName { get; }
+        List<IGenericObject> ChildObjects { get; }
+
         string GetTableName();
 
         string GetInsertValues();

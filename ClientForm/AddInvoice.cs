@@ -1,6 +1,7 @@
 ﻿using Domain;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -10,17 +11,34 @@ namespace ClientForm
     public partial class AddInvoice : Form
     {
         private readonly UiController.UIController _uiController;
-        private readonly List<InvoiceItem> _invoiceItems = new List<InvoiceItem>();
+        private  List<InvoiceItem> _invoiceItems = new List<InvoiceItem>();
+        private readonly bool _update;
+        private readonly Invoice _invoice;
 
-        public AddInvoice(UiController.UIController uiController)
+        public AddInvoice(UiController.UIController uiController, Invoice invoice, bool update = false)
         {
             InitializeComponent();
             _uiController = uiController;
-            var invoice = new Invoice();
+            _update = update;
             _uiController.GetAllAutos(cmbAuto);
             _uiController.GetAllEmployees(cmbEmployee);
             txtValue.Text = "0";
-            btnSubmitInvoice.Visible = false;
+            _invoice = invoice;
+            if (_invoice != null)
+            {
+                if (_invoice.InvoiceItems.Any())
+                {
+                    btnSubmitInvoice.Visible = true;
+                    txtValue.Text = _invoice.InvoiceItems.Sum(s => s.Value).ToString();
+                }
+                _invoiceItems = invoice.InvoiceItems;
+                cmbAuto.SelectedItem = invoice.Auto;
+                cmbEmployee.SelectedItem = invoice.Employee;
+            }
+            else
+            {
+                btnSubmitInvoice.Visible = false;
+            }
         }
 
         private void btnAddInvoiceItem_Click(object sender, EventArgs e)
@@ -35,18 +53,40 @@ namespace ClientForm
             {
                 txtValue.Text = "0";
             }
-            //_uiController.FindInvoiceItems(dgvInvoiceItems, txtValue);
         }
 
         private void AddInvoice_Load(object sender, EventArgs e)
         {
-            _uiController.FindInvoiceItems(dgvItems, txtValue);
+            _invoiceItems = _uiController.FindInvoiceItems(dgvItems, _invoice?.InvoiceNumber.ToString());
         }
 
         private void btnSubmitInvoice_Click(object sender, EventArgs e)
         {
-            _uiController.AddInvoice(_invoiceItems, dateTimePicker, cmbAuto, cmbEmployee);
+            if (_update)
+            {
+                _uiController.UpdateInvoice(_invoice, _invoiceItems, dateTimePicker, cmbAuto, cmbEmployee);
+            }
+            else
+            {
+                _uiController.AddInvoice(_invoiceItems, dateTimePicker, cmbAuto, cmbEmployee);
+            }
             Dispose();
+        }
+
+        private void DeleteItem_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvItems.SelectedRows)
+            {
+                var item = row.DataBoundItem as InvoiceItem;
+                dgvItems.Rows.Remove(row);
+                _invoiceItems.RemoveAll(r => r.Value == item.Value && r.Service.Name == item.Service.Name);
+                txtValue.Text = _invoiceItems.Sum(s => s.Value).ToString();
+            }
+
+            if (!_invoiceItems.Any())
+            {
+                btnSubmitInvoice.Visible = false;
+            }
         }
     }
 }

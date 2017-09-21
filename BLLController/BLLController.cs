@@ -60,7 +60,7 @@ namespace BLL
 
         public static List<Service> FindServices(string criteria)
         {
-            var tmpService = new Service { Name = criteria };
+            var tmpService = new Service { Id = int.Parse(criteria) };
             var findSo = new FindSO();
             var tmpList = findSo.ExecuteSO(tmpService) as List<IGenericObject>;
             return tmpList?.Cast<Service>().ToList();
@@ -131,7 +131,17 @@ namespace BLL
 
             var findSo = new FindSO();
             var tmpList = findSo.ExecuteSO(invoice) as List<IGenericObject>;
-            return tmpList?.Cast<Invoice>().ToList();
+            var invoices =  tmpList?.Cast<Invoice>().ToList();
+            if (invoices != null)
+            {
+                foreach (var inv in invoices)
+                {
+                    var invoiceItems =
+                        findSo.ExecuteSO(new InvoiceItem {InvoiceNumber = inv.InvoiceNumber}) as List<IGenericObject>;
+                    inv.InvoiceItems = invoiceItems?.Cast<InvoiceItem>().ToList();
+                }
+            }
+            return invoices;
         }
 
         public static List<InvoiceItem> FindInvoiceItems(string criteria)
@@ -158,6 +168,18 @@ namespace BLL
             {
                return null;
             }
+        }
+
+        public static int UpdateInvoice(Invoice invoice)
+        {
+            var updateSo = new UpdateSO();
+            return Convert.ToInt32(updateSo.ExecuteSO(invoice));
+        }
+
+        public static int DeleteInvoice(Invoice invoice)
+        {
+            var deleteSo = new DeleteSO();
+            return Convert.ToInt32(deleteSo.ExecuteSO(invoice));
         }
     }
 }

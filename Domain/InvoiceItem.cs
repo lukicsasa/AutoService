@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.OleDb;
 
 namespace Domain
@@ -7,6 +8,13 @@ namespace Domain
     [Serializable]
     public class InvoiceItem : IGenericObject
     {
+        [Browsable(false)]
+        public bool IsComplex => false;
+        [Browsable(false)]
+        public List<IGenericObject> ChildObjects => null;
+        [Browsable(false)]
+        public string ChildObjectTableName => null;
+
         private int _invoiceNo;
 
         private int _sortNumber;
@@ -15,16 +23,18 @@ namespace Domain
 
         private int _value;
 
+        [Browsable(false)]
         public int InvoiceNumber
         {
-            private get => _invoiceNo;
+            get => _invoiceNo;
             set => _invoiceNo = value;
         }
 
+        [Browsable(false)]
         public int SortNumber
         {
-            private get => _sortNumber;
-            set => _sortNumber = value;
+            get => _sortNumber;
+            private set => _sortNumber = value;
         }
 
         public int Value

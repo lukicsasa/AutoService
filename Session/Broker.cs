@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.OleDb;
+using System.Transactions;
 using Domain;
 
 namespace Session
@@ -92,6 +93,28 @@ namespace Session
 
         public bool Input(IGenericObject obj)
         {
+            if (obj.IsComplex)
+            {
+                try
+                {
+                    var query = "INSERT INTO " + obj.GetTableName() + " " + obj.GetInsertColumns() + " VALUES " + obj.GetInsertValues();
+                    _command = new OleDbCommand(query, _connection, _transaction);
+                    _command.ExecuteNonQuery();
+
+                    foreach (var childObj in obj.ChildObjects)
+                    {
+                        var query2 = "INSERT INTO " + childObj.GetTableName() + " " + childObj.GetInsertColumns() + " VALUES " + childObj.GetInsertValues();
+                        _command = new OleDbCommand(query2, _connection, _transaction);
+                        _command.ExecuteNonQuery();
+                    }
+
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
             try
             {
                 var query = "INSERT INTO " + obj.GetTableName() + " " + obj.GetInsertColumns() + " VALUES " + obj.GetInsertValues();
@@ -124,7 +147,7 @@ namespace Session
         {
             try
             {
-                var query = "Select Max(" + obj.GetPrimaryKeyName() + ") as MaxBroj from " + obj.GetTableName();
+                var query = "Select Max(" + obj.GetPrimaryKeyName() + ") as MaxNumber from " + obj.GetTableName();
                 _command = new OleDbCommand(query, _connection, _transaction);
                 var reader = _command.ExecuteReader();
 
@@ -133,7 +156,7 @@ namespace Session
                 {
                     if (reader != null)
                     {
-                        return Convert.ToInt32(reader["MaxBroj"]) + 1;
+                        return Convert.ToInt32(reader["MaxNumber"]) + 1;
                     }
                 }
                 catch
@@ -182,6 +205,29 @@ namespace Session
 
         public bool Delete(IGenericObject obj)
         {
+            if (obj.IsComplex)
+            {
+                try
+                {
+                    foreach (var childObj in obj.ChildObjects)
+                    {
+                        var query2 = "DELETE  FROM " + childObj.GetTableName() + " WHERE " + childObj.GetPrimaryKeyValue();
+                        _command = new OleDbCommand(query2, _connection, _transaction);
+                        _command.ExecuteNonQuery();
+                    }
+
+                    var query = "DELETE  FROM " + obj.GetTableName() + " WHERE " + obj.GetPrimaryKeyValue();
+                    _command = new OleDbCommand(query, _connection, _transaction);
+                    _command.ExecuteNonQuery();
+
+
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }
             try
             {
                 var query = "DELETE  FROM " + obj.GetTableName() + " WHERE " + obj.GetPrimaryKeyValue();
@@ -197,6 +243,33 @@ namespace Session
 
         public bool Update(IGenericObject obj)
         {
+            if (obj.IsComplex)
+            {
+                try
+                {
+                    var query = "UPDATE " + obj.GetTableName() + " SET " + obj.GetUpdateValues() + " WHERE " +
+                                obj.GetPrimaryKeyValue();
+                    _command = new OleDbCommand(query, _connection, _transaction);
+                    _command.ExecuteNonQuery();
+
+                    var query2 = "DELETE  FROM " + obj.ChildObjectTableName + " WHERE " + obj.GetPrimaryKeyValue();
+                    _command = new OleDbCommand(query2, _connection, _transaction);
+                    _command.ExecuteNonQuery();
+
+                    foreach (var childObj in obj.ChildObjects)
+                    {
+                        var query3 = "INSERT INTO " + childObj.GetTableName() + " " + childObj.GetInsertColumns() + " VALUES " + childObj.GetInsertValues();
+                        _command = new OleDbCommand(query3, _connection, _transaction);
+                        _command.ExecuteNonQuery();
+                    }
+
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }
             try
             {
                 var query = "UPDATE " + obj.GetTableName() + " SET " + obj.GetUpdateValues() + " WHERE " +

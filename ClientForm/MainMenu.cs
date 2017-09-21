@@ -24,7 +24,7 @@ namespace ClientForm
             }
             catch (Exception ex)
             {
-                
+
             }
         }
 
@@ -74,12 +74,22 @@ namespace ClientForm
 
         private void addInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new AddInvoice(_uiController).ShowDialog();
+            new AddInvoice(_uiController, null).ShowDialog();
         }
 
         private void searchInvoicesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new SearchInvoices(_uiController).ShowDialog();
+        }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            var result = _uiController.Logout();
+            if (result)
+            {
+                Hide();
+                new MainMenu().ShowDialog();
+            }
         }
     }
 }
