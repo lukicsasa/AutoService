@@ -20,11 +20,6 @@ namespace ClientForm
             _uiController.SearchInvoices(cmbCriteria, dgvInvoices, true);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            new InvoiceDetails(_uiController, dgvInvoices).ShowDialog();
-        }
-
         private void Delete_Click(object sender, EventArgs e)
         {
             var result = _uiController.DeleteInvoice(dgvInvoices);

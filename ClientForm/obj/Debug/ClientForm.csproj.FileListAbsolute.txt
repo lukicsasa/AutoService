@@ -75,7 +75,6 @@ C:\PrivateProjects\AutoService\ClientForm\bin\Debug\KontrolerKorisnickogInterfej
 C:\PrivateProjects\AutoService\ClientForm\bin\Debug\Domen.pdb
 C:\PrivateProjects\AutoService\ClientForm\bin\Debug\KontrolerKorisnickogInterfejsa.pdb
 C:\PrivateProjects\AutoService\ClientForm\obj\Debug\ClientForm.csprojResolveAssemblyReference.cache
-C:\PrivateProjects\AutoService\ClientForm\obj\Debug\ClientForm.InvoiceDetails.resources
 C:\PrivateProjects\AutoService\ClientForm\obj\Debug\ClientForm.MainMenu.resources
 C:\PrivateProjects\AutoService\ClientForm\obj\Debug\ClientForm.AddInvoice.resources
 C:\PrivateProjects\AutoService\ClientForm\obj\Debug\ClientForm.Login.resources

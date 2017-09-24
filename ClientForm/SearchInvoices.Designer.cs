@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
             this.dgvInvoices = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -37,16 +36,6 @@
             this.Delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInvoices)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(480, 309);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 23);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Details";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dgvInvoices
             // 
@@ -85,7 +74,7 @@
             // 
             // Update
             // 
-            this.Update.Location = new System.Drawing.Point(255, 309);
+            this.Update.Location = new System.Drawing.Point(482, 309);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(103, 23);
             this.Update.TabIndex = 28;
@@ -111,7 +100,6 @@
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Update);
             this.Controls.Add(this.cmbCriteria);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.dgvInvoices);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -124,8 +112,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dgvInvoices;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
